@@ -10,9 +10,12 @@ const Wrapper =styled.div`
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `
 const Left = styled.div`
     flex: 1;
+    display: flex;
+    align-items: center;
 `
 
 const Language = styled.span`
@@ -21,11 +24,24 @@ const Language = styled.span`
 `
 
 const SearchContainer = styled.div`
-    border: 1 solid lightgrey;
+    border: 0.5px solid lightgrey;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    padding: 5px;
+`
+
+const Input = styled.input`
+    border: none;
 `
 
 const Center = styled.div`
     flex: 1;
+    text-align: center;
+`
+
+const Logo = styled.h1`
+    font-weight: bold;
 `
 
 const Right = styled.div`
@@ -39,11 +55,11 @@ const Navbar = () => {
             <Left>
               <Language>EN</Language>
               <SearchContainer>
-                input 
+                <Input/> 
                 <Search/>
               </SearchContainer>
             </Left>
-            <Center>center</Center>
+            <Center><Logo>TradeOA</Logo></Center>
             <Right>right</Right>
 
         </Wrapper>
