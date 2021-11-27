@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Search} from '@material-ui/icons';
+import {Search} from '@material-ui/icons'
+import {Badge} from '@material-ui/core'
+import {ShoppingCartOutlined} from '@material-ui/icons'
+
 
 const Container = styled.div`
     height: 60px;
@@ -47,6 +50,10 @@ const Logo = styled.h1`
 const Right = styled.div`
     flex:1;
 `
+const MenuItem = styled.div`
+    font-size: 14px;
+    cursor: pointer;
+`
 
 const Navbar = () => {
   return (
@@ -60,7 +67,15 @@ const Navbar = () => {
               </SearchContainer>
             </Left>
             <Center><Logo>TradeOA</Logo></Center>
-            <Right>right</Right>
+            <Right>
+              <MenuItem>Sign Up</MenuItem>
+              <MenuItem>Log in</MenuItem>
+              <MenuItem>
+              <Badge badgeContent={4} color="primary">
+                <ShoppingCartOutlined/>
+              </Badge>
+              </MenuItem>
+            </Right>
 
         </Wrapper>
     </Container>
