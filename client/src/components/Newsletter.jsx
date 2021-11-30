@@ -8,6 +8,7 @@ const Input = styled.input``
 const Button = styled.button``
 
 const Newsletter =()=> {
+    
     return (
         <Container>
             <title>
