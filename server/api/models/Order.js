@@ -1,15 +1,19 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const Product = require('./Product');
 
 const OrderSchema = new Schema({
-    purchaseDate: {
+
+  id: mongoose.ObjectId,
+
+  purchaseDate: {
         type: Date,
         default: Date.now
       },
       products: [
         {
-          type: Schema.Types.ObjectId,
-          ref: 'Product'
+          type: mongoose.ObjectId,
+          ref: Product
         }
       ]
 

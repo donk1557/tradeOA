@@ -6,6 +6,7 @@ const userRoute = require("./routes/user");
 const authRoute = require("./routes/login");
 const prodRoute = require("./routes/product");
 const orderRoute = require("./routes/order");
+const stripeRoute = require("./routes/transactionStripe");
 
 mongoose.connect('mongodb://localhost:27017/test', {
   useNewUrlParser: true,
@@ -17,6 +18,7 @@ app.use('/api/user', userRoute);
 app.use('/api/auth', authRoute);
 app.use('/api/products', prodRoute);
 app.use('/api/orders', orderRoute);
+app.use('/api/checkout', stripeRoute);
 
 app.listen(5000, () => {
     console.log("Backend server running")
