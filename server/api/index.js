@@ -1,8 +1,7 @@
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
-const cookieSession = require("cookie-session");
+
 const express = require("express");
-const cors = require("cors");
-const passport = require("passport");
+
 const app = express();
 const mongoose = require("mongoose");
 const userRoute = require("./routes/user");
@@ -18,22 +17,7 @@ mongoose.connect('mongodb://localhost:27017/test', {
 
 app.use(express.json());
 
-app.use(cookieSession({
-   name: "session",
-   key: ["something"],
-   maxAge: 30 * 60 * 100
-}));
 
-app.use(passport.initialize());
-app.use(passport.session());
-
-app.use(
-    cors({
-        origin: "http://localhost:5000",
-        methods: "GET, POST, PUT, DELETE",
-        credentials: true,
-    })
-)
 app.use('/api/user', userRoute);
 app.use('/api/auth', authRoute);
 app.use('/api/products', prodRoute);
