@@ -20,7 +20,7 @@ app.use(express.json());
 
 app.use(cookieSession({
    name: "session",
-   key: ["lama"],
+   key: ["something"],
    maxAge: 30 * 60 * 100
 }));
 
@@ -29,7 +29,7 @@ app.use(passport.session());
 
 app.use(
     cors({
-        origin: "http://localhost:3000",
+        origin: "http://localhost:5000",
         methods: "GET, POST, PUT, DELETE",
         credentials: true,
     })
@@ -40,6 +40,7 @@ app.use('/api/products', prodRoute);
 app.use('/api/orders', orderRoute);
 app.use('/api/checkout', stripeRoute);
 
-app.listen(5000, () => {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
     console.log("Backend server running")
 });
