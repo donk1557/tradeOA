@@ -11,7 +11,7 @@ router.post('/payment', (req, res)=> {
     );
 });
 
-router.post('/paymentintent', (req, res)=> {
+router.post('/paymentintent', async (req, res)=> {
     const {paymentMethod, currency, amount} = req.body;
     try{
    const payIntent = await stripe.paymentIntents.create(
