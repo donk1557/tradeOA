@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Container = styled.div`
     height: 30px;
-    background-color: teal;
+    background-color: lightblue;
     color: white;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@ const Container = styled.div`
 const Announcement =() => {
     return(
         <Container>
-            Super cool deals! DON'T MISS YOUR CHANCE
+            Super cool deals! DON'T CATCH A COLD!!
         </Container>
     )
 }

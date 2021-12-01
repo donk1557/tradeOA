@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import {Search} from '@material-ui/icons'
 import {Badge} from '@material-ui/core'
 import {ShoppingCartOutlined} from '@material-ui/icons'
-import {mobile} from "../responseive"
+
+import {mobile} from "../responsive"
+
 
 
 const Container = styled.div`
@@ -33,7 +35,7 @@ const Language = styled.span`
 `
 
 const SearchContainer = styled.div`
-    border: 0.5px solid lightgrey;
+    border: 0.5px solid lightblue;
     display: flex;
     align-items: center;
     margin-left: 25px;
