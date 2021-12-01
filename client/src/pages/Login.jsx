@@ -8,7 +8,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    url("https://images.pexels.com/photos/7454876/pexels-photo-7454876.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")
       center;
   background-size: cover;
   display: flex;
@@ -44,7 +44,7 @@ const Button = styled.button`
   width: 40%;
   border: none;
   padding: 15px 20px;
-  background-color: teal;
+  background-color: blue;
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
@@ -66,10 +66,6 @@ const Login = () => {
                 <Form>
                     <Input placeholder="username"/>
                     <Input placeholder="password"/> 
-                    <Agreement>
-                        By creating an account, I consent to the processing of my personal
-                        data in accordance with the <b>PRIVACY POLICY</b>
-                    </Agreement>
                     <Button>LOGIN</Button>
                     <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
                     <Link>CREATE A NEW ACCOUNT</Link>

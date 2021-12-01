@@ -4,7 +4,7 @@ const Container = styled.div`
     width: 100vw;
     height: 100vh;
     background: linear-gradient(rgba(255,255,255,0.5))
-    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center;
+    url("https://www.pexels.com/photo/cableway-in-mountains-covered-with-snow-7258242/") center;
     display: flex;
     align-items: center;
     justify-content: center;
