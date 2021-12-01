@@ -92,6 +92,7 @@ const Amount = styled.span`
     height: 30px;
     border-radius: 10px;
     border: 1px solid blue;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,7 +101,9 @@ const Amount = styled.span`
 
 const Button = styled.button`
     padding; 15px;
+
     border: 2px solid blue;
+
     background-color: white;
     cursor: pointer;
     font-weight: 500;
@@ -121,12 +124,16 @@ const Product = () => {
                <Image src="https://i.ibb.co/S6qMxwr/jean.jpg"/>
                </ImgContainer>
                <InfoContainer>
+
                    <Title>Suede Carpet</Title>
+
                    <Desc>A carpet made from Suede</Desc>
                    <Price>$20</Price>
                    <FilterContainer>
                        <Filter>
+
                            <FilterTitle>Color</FilterTitle>
+
                            <FilterColor color="black" />
                            <FilterColor color="darkblue" />
                            <FilterColor color="gray" />
@@ -145,13 +152,17 @@ const Product = () => {
                    <AddContainer>
                        <AmountContainer>
                            <Remove/>
+
                            <Amount>1</Amount>
+
                            <Add/>
                        </AmountContainer>
                        <Button></Button>
                    </AddContainer>
                </InfoContainer>
+
             </Wrapper>
+
 
             <Newsletter/>
             <Footer/>

@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import {Search} from '@material-ui/icons'
 import {Badge} from '@material-ui/core'
 import {ShoppingCartOutlined} from '@material-ui/icons'
+
 import {mobile} from "../responsive"
+
 
 
 const Container = styled.div`
