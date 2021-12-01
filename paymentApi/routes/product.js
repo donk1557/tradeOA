@@ -16,14 +16,7 @@ router.post("/", verifyTokenandAdmin ,async(req,res)=>{
     }
 })
 
-router.get("/", verifyTokenandAdmin, async (req,res)=>{
-    try{
-      const users = query ? await User.find().sort({_id: -1}).limit(5) : await User.find();
-    res.status(200).json(users);
-    }catch(err){
-        res.status(500).json(err)
-    }
-});
+
 
 router.put("/:id", verifyTokenandAdmin, async (req,res)=>{
    
@@ -39,7 +32,7 @@ router.put("/:id", verifyTokenandAdmin, async (req,res)=>{
 //delete
 router.delete("/:id", verifyTokenandAdmin, async (req,res)=>{
     try{
-       const product = await Product.findByIdAndDelete(req.params.id)
+       await Product.findByIdAndDelete(req.params.id)
         res.status(200).json("Product Deleted")
     }catch(err){
         res.status(500).json(err)
