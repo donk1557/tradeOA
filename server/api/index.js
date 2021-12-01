@@ -1,4 +1,4 @@
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+
 
 const express = require("express");
 
@@ -10,7 +10,7 @@ const prodRoute = require("./routes/product");
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/transactionStripe");
 
-mongoose.connect('mongodb://localhost:27017/test', {
+mongoose.connect('process.env.MONGODB_URI || 'mongodb://localhost/projectDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(()=>console.log("DB Connected.."));
