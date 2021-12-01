@@ -45,6 +45,7 @@ const Button = styled.button`
 `
 
 const Newsletter =()=> {
+    
     return (
         <Container>
             <Title>
